@@ -125,7 +125,7 @@ class PlayListDownloader(object):
         """
         print "#!/usr/bin/env sh"
         print ""
-        for p in range(1, self.pages):
+        for p in range(1, self.pages+1):
             url = self.get_page_url(p)
             print """# -- Videos in %s";""" % url
             videos = self.worker.extract_videos(url)
